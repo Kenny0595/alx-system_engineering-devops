@@ -2,13 +2,13 @@
 # a script showing how to use pupet to make changes to a file
 
 
-file_line{'Turn off passwd auth':
-path => '/etc/ssh/ssh_config',
-line => 'PasswordAuthentication no'
-}
+file { 'ect/ssh/ssh_cofig':
+	ensure => present,
 
-file_line{'Declare identity file':
-path => '/etc/ssh/ssh_config',
-line => 'IdentityFile ~/.ssh/school'
+content =>"
 
+	#SSH client configuration
+	host"
+	identityfile ~/.ssh/school
+	passwordAuthentication no
 }
