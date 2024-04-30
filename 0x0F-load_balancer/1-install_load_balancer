@@ -17,8 +17,8 @@ frontend  dhorgetechsolution_frontend
         default_backend dhorgetechsolution_backend
 backend dhorgetechsolution_backend
         balance roundrobin
-        server 262735-web-01 18.209.180.5:80 check
-        server 262735-web-02 54.208.162.205:80 check
+        server 262735-web-01 34.207.189.17:80 check
+        server 262735-web-02 52.3.251.21:80 check
 "
 echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
